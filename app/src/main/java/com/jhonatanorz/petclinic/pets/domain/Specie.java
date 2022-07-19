@@ -1,4 +1,4 @@
-package com.jhonatanorz.petclinic.pets;
+package com.jhonatanorz.petclinic.pets.domain;
 
 import lombok.Getter;
 
