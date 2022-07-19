@@ -3,6 +3,7 @@ package com.jhonatanorz.petclinic.shared.infraestructure;
 import com.jhonatanorz.petclinic.shared.domain.Identifiable;
 import com.jhonatanorz.petclinic.shared.domain.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +23,7 @@ public class InMemoryRepository<ID, T extends Identifiable<ID>> implements Repos
 
     @Override
     public List<T> find() {
-        return (List<T>) memory.values();
+        return new ArrayList(memory.values());
     }
 
     @Override
