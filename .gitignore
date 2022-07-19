@@ -37,7 +37,7 @@ tmp/**/*
 local.properties
 .settings/
 .loadpath
-/src/main/resources/rebel.xml
+/web/src/main/resources/rebel.xml
 
 ### VS Code ###
 .vscode/
