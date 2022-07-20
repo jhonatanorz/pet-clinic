@@ -5,13 +5,14 @@ import com.jhonatanorz.petclinic.pets.domain.Pet;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
 public class Owner extends Person {
 
     @Setter
-    private Set<Pet> pets;
+    private Set<Pet> pets = new HashSet<>();
 
     public Owner(String id, String name, String lastName) {
         super(id, name, lastName);
