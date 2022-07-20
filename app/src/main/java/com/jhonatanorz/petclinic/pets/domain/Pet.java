@@ -11,18 +11,18 @@ public class Pet extends Identifiable<String> {
 
     private String name;
     private LocalDateTime birthdate;
-    private Specie type;
+    private Specie specie;
     private Owner owner;
 
-    public Pet(String id, String name, Owner owner) {
-        this(id, name, null, null, owner);
+    public Pet(String id, String name, Specie specie, Owner owner) {
+        this(id, name, null, specie, owner);
     }
 
-    public Pet(String id, String name, LocalDateTime birthdate, Specie type, Owner owner) {
+    public Pet(String id, String name, LocalDateTime birthdate, Specie specie, Owner owner) {
         super(id);
         this.name = name;
         this.birthdate = birthdate;
-        this.type = type;
+        this.specie = specie;
         this.owner = owner;
     }
 }
