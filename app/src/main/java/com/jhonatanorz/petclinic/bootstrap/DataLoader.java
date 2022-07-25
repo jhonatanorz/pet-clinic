@@ -4,11 +4,13 @@ import com.jhonatanorz.petclinic.owners.domain.Owner;
 import com.jhonatanorz.petclinic.owners.domain.OwnerRepository;
 import com.jhonatanorz.petclinic.vets.domain.Vet;
 import com.jhonatanorz.petclinic.vets.domain.VetRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
+@Slf4j
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -37,7 +39,7 @@ public class DataLoader implements CommandLineRunner {
         );
         ownerRepository.save(sam);
 
-        System.out.println("Owners loaded...");
+        log.info("Owners loaded...");
 
         Vet ana = new Vet(
                 UUID.randomUUID().toString(),
@@ -53,7 +55,7 @@ public class DataLoader implements CommandLineRunner {
         );
         vetRepository.save(michael);
 
-        System.out.println("Vets loaded...");
+        log.info("Vets loaded...");
 
     }
 
