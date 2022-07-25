@@ -3,7 +3,9 @@ package com.jhonatanorz.petclinic.appointments.domain;
 import com.jhonatanorz.petclinic.shared.domain.Identifiable;
 import lombok.Getter;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Getter
@@ -11,7 +13,6 @@ import java.time.LocalDate;
 @Table(name = "appointments")
 public class Appointment extends Identifiable<String> {
 
-    @Temporal(value = TemporalType.DATE)
     private LocalDate date;
 
     @Column(name = "pet_id")

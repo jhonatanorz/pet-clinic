@@ -3,9 +3,13 @@ package com.jhonatanorz.petclinic.owners.infraestructure;
 import com.jhonatanorz.petclinic.owners.domain.Owner;
 import com.jhonatanorz.petclinic.owners.domain.OwnerRepository;
 import com.jhonatanorz.petclinic.owners.infraestructure.spring.SpringDataJpaOwnerRepository;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
+@Profile("default")
 public class DatabaseOwnerRepository implements OwnerRepository {
 
     private SpringDataJpaOwnerRepository repository;

@@ -3,9 +3,13 @@ package com.jhonatanorz.petclinic.pets.infraestructure;
 import com.jhonatanorz.petclinic.pets.domain.Pet;
 import com.jhonatanorz.petclinic.pets.domain.PetRepository;
 import com.jhonatanorz.petclinic.pets.infraestructure.spring.SpringDataJpaPetRepository;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
+@Profile("default")
 public class DatabasePetRepository implements PetRepository {
 
     private final SpringDataJpaPetRepository repository;

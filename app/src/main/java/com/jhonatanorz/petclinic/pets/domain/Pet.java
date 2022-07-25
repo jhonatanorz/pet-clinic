@@ -14,7 +14,6 @@ public class Pet extends Identifiable<String> {
 
     private String name;
 
-    @Temporal(value = TemporalType.DATE)
     private LocalDateTime birthdate;
 
     @OneToOne
