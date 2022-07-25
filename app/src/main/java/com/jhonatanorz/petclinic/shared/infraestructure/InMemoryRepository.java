@@ -3,12 +3,13 @@ package com.jhonatanorz.petclinic.shared.infraestructure;
 import com.jhonatanorz.petclinic.shared.domain.Identifiable;
 import com.jhonatanorz.petclinic.shared.domain.Repository;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class InMemoryRepository<ID, T extends Identifiable<ID>> implements Repository<ID, T> {
+public class InMemoryRepository<ID extends Serializable, T extends Identifiable<ID>> implements Repository<ID, T> {
 
     private final Map<ID, T> memory;
 
